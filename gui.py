@@ -9,3 +9,5 @@ window = sg.Window("My To-Do App",layout=[[label],[user_input,add_button]])
 
 window.read()
 window.close()
+
+print("Hello")
