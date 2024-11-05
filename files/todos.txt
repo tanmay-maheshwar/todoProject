@@ -1,4 +1,5 @@
-Walk
-Play ball
-Run
-Bath
+run
+bath
+wash
+buy groceries
+go gym
