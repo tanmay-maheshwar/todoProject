@@ -1,5 +1,6 @@
-run
-bath
-wash
+play
 buy groceries
 go gym
+program
+wash
+go office
