@@ -1,6 +1,7 @@
-play
+run
 buy groceries
 go gym
 program
 wash
 go office
+play badminton
