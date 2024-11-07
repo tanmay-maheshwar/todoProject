@@ -1,2 +1,3 @@
 wash
-walk
+run
+bath

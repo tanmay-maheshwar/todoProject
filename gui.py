@@ -8,7 +8,8 @@ sg.theme("DarkGrey11")
 clock = sg.Text(time.strftime("%c"),key='time')
 label = sg.Text("Type in to-do:")
 user_input = sg.InputText(tooltip="Enter a todo",key="todo")
-add_button = sg.Button("Add")
+add_button = sg.Button(image_source="./icons/add.png",image_size=(25,25),key="Add",tooltip="Add todo")
+
 
 todos_list_display = sg.Listbox(values=functions.get_todos(), key = "todos_list", enable_events= True, size= (43,10))
 edit_button = sg.Button("Edit")
@@ -30,12 +31,17 @@ while True:
 
     match event:
         case "Add":
-            todos_list = functions.get_todos()
-            todos_list.append(values['todo']+'\n')
+            if values['todo'] != "":
 
-            functions.write_todos(todos_list)
-            window['todos_list'].update(values= todos_list)
-            window['todo'].update(value='')
+                todos_list = functions.get_todos()
+                todos_list.append(values['todo']+'\n')
+
+                functions.write_todos(todos_list)
+                window['todos_list'].update(values= todos_list)
+                window['todo'].update(value='')
+
+            else:
+                sg.popup("Item is Empty!",font=("Helvetica",12))
 
 
         case "Edit":
