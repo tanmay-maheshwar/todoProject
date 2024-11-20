@@ -1,4 +1,5 @@
-FILE_PATH = "files/todos.txt"
+FILE_PATH = "todos.txt"
+
 
 
 def get_todos(filepath=FILE_PATH):
@@ -18,4 +19,7 @@ def write_todos(todos_arg, filepath=FILE_PATH):
     """
     with open(filepath, 'w') as file_local:
         file_local.writelines(todos_arg)
+
+
+
 
